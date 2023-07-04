@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/intra/static/css/main.50ada7bd.css",
+    "main.js": "/intra/static/js/main.0dda68b5.js",
+    "static/js/787.8fe4a300.chunk.js": "/intra/static/js/787.8fe4a300.chunk.js",
+    "static/media/Home.png": "/intra/static/media/Home.c4a44ed6d661a4356e93.png",
+    "static/media/HelveticaNeue.ttc": "/intra/static/media/HelveticaNeue.67d426c3bd180e2ea838.ttc",
+    "static/media/product4.png": "/intra/static/media/product4.a2a3084f1c139b761fc5.png",
+    "static/media/product1.png": "/intra/static/media/product1.4e47a63e3a59f89aaf28.png",
+    "static/media/joinPic2.png": "/intra/static/media/joinPic2.73aefe8d9a4aaef59e0b.png",
+    "static/media/product2.png": "/intra/static/media/product2.1d0fdb6d3274ceda8da4.png",
+    "static/media/Header.png": "/intra/static/media/Header.6560f4f236880b24e8a4.png",
+    "static/media/product3.png": "/intra/static/media/product3.63f03ee466504c119852.png",
+    "static/media/arb.otf": "/intra/static/media/arb.b93bbc5b262cc61c4de8.otf",
+    "static/media/colored_full.png": "/intra/static/media/colored_full.1970078b0ddd987cd832.png",
+    "static/media/CEO.jpeg": "/intra/static/media/CEO.8f84c2a06eed4a2347d0.jpeg",
+    "static/media/Chairman.jpeg": "/intra/static/media/Chairman.f116fe55d28fd974714a.jpeg",
+    "static/media/white_full.png": "/intra/static/media/white_full.e9d706488ca012fb05d4.png",
+    "static/media/joinPic1.jpg": "/intra/static/media/joinPic1.b0b8822e0d0ecb0f525b.jpg",
+    "static/media/joinPic3.jpg": "/intra/static/media/joinPic3.14a6f8b9979b08e48a36.jpg",
+    "static/media/3 User 1.svg": "/intra/static/media/3 User 1.fdbbabd030c647539bed1ea0c67451a1.svg",
+    "static/media/Arrowup.svg": "/intra/static/media/Arrowup.959b488e824e44f599d8cb090860d3b9.svg",
+    "index.html": "/intra/index.html",
+    "main.50ada7bd.css.map": "/intra/static/css/main.50ada7bd.css.map",
+    "main.0dda68b5.js.map": "/intra/static/js/main.0dda68b5.js.map",
+    "787.8fe4a300.chunk.js.map": "/intra/static/js/787.8fe4a300.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.50ada7bd.css",
+    "static/js/main.0dda68b5.js"
+  ]
+}
