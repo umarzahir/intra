@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="188px" height="188px" viewBox="0 0 188 188" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>3 User 1</title>
+    <defs>
+        <filter x="-37.1%" y="-82.6%" width="174.2%" height="265.1%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="25" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.753246752   0 0 0 0 0.797662589   0 0 0 0 0.946586277  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <rect id="path-2" x="0" y="0" width="34" height="34"></rect>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01_Home-draft" transform="translate(-425.000000, -4172.000000)">
+            <g id="Widget-24" filter="url(#filter-1)" transform="translate(270.000000, 4235.000000)">
+                <g id="3-User-1" transform="translate(232.000000, 14.000000)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <g id="3-User-1-(Background/Mask)"></g>
+                    <path d="M24.9257812,15.486866 C27.1958478,15.486866 29.0372295,13.646687 29.0372295,11.3767054 C29.0372295,9.10673804 27.1958478,7.26660156 24.9257812,7.26660156" id="Vector" stroke="#263770" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero" mask="url(#mask-3)"></path>
+                    <path d="M26.8164062,19.9533691 C27.4942816,20.0001191 28.16819,20.0963118 28.831757,20.2456285 C29.7538658,20.4261118 30.8628337,20.8040782 31.2576589,21.6312698 C31.5095424,22.1611031 31.5095424,22.7779189 31.2576589,23.3090272 C30.8641087,24.1362187 29.7538658,24.5129113 28.831757,24.7024612" id="Vector" stroke="#263770" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero" mask="url(#mask-3)"></path>
+                    <path d="M8.91119766,15.486866 C6.64123035,15.486866 4.79980469,13.646687 4.79980469,11.3767054 C4.79980469,9.10673804 6.64123035,7.26660156 8.91119766,7.26660156" id="Vector" stroke="#263770" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero" mask="url(#mask-3)"></path>
+                    <path d="M7.02050781,19.9533691 C6.34263278,20.0001191 5.66865359,20.0963118 5.00505858,20.2456285 C4.08304942,20.4261118 2.97402604,20.8040782 2.58054688,21.6312698 C2.32731771,22.1611031 2.32731771,22.7779189 2.58054688,23.3090272 C2.97273689,24.1362187 4.08304942,24.5129113 5.00505858,24.7024612" id="Vector" stroke="#263770" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" fill-rule="nonzero" mask="url(#mask-3)"></path>
+                    <path d="M25.4413929,24.3200831 C25.4413929,27.1044007 21.5377666,27.8263321 16.9120669,27.8263321 C12.3111162,27.8263321 8.3828125,27.1303256 8.3828125,24.3448747 C8.3828125,21.5592821 12.2864378,20.838623 16.9120669,20.838623 C21.5118418,20.838623 25.4413929,21.5346323 25.4413929,24.3200831 Z" id="Vector" stroke="#263770" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" mask="url(#mask-3)"></path>
+                    <path d="M11.4462891,11.3982266 C11.4462891,8.36467583 13.8785792,5.93237305 16.9121161,5.93237305 C19.9457664,5.93237305 22.3780403,8.36467583 22.3780403,11.3982266 C22.3780403,14.4330807 19.9457664,16.8653555 16.9121161,16.8653555 C13.8785792,16.8653555 11.4462891,14.4330807 11.4462891,11.3982266 Z" id="Vector" stroke="#263770" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,0" mask="url(#mask-3)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
