@@ -14,16 +14,55 @@ export default function MyDrawer({open, onClose, }) {
             <div className='menu'>
             <CgClose onClick={() => onClose()} fontSize={36} style={{ marginLeft: "auto", cursor: "pointer" }} />
             <ul >
-                <li>About Us</li>
-                <li>Our Vision</li>
-                <li>Leaders</li>
-                <li>Intra In Numbers</li>
-                <li>Products</li>
-                <li>Industries</li>
-                <li>Capabilities</li>
-                <li>News</li>
-                <li>carrers</li>
-                <li>Contacts</li>
+                <li
+                 onClick={() => {
+                  onClose("as")
+                }}> 
+                 About Us
+                 </li>
+                <li onClick={() => {
+                  onClose("vision")
+                }} >Our Vision</li>
+                <li 
+                 onClick={() => {
+                  onClose("leader")
+                }}
+                >Leaders</li>
+                <li
+                onClick={() => {
+                  onClose("intra")
+                }}
+                >Intra In Numbers</li>
+                <li
+                 onClick={() => {
+                  onClose("prod")
+                }}
+                >Products</li>
+                <li 
+                 onClick={() => {
+                  onClose("ind")
+                }}
+                >Industries</li>
+                <li
+                 onClick={() => {
+                  onClose("cap")
+                }}
+                >Capabilities</li>
+                <li
+                 onClick={() => {
+                  onClose("news")
+                }}
+                >News</li>
+                <li
+                 onClick={() => {
+                  onClose("career")
+                }}
+                >Carrers</li>
+                <li
+                 onClick={() => {
+                  onClose("contact")
+                }}
+                >Contacts</li>
             </ul>
         </div>
           </Drawer>

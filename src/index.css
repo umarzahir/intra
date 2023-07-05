@@ -7,10 +7,395 @@
     font-family: HN;
     src: url(./assets//fonts//HelveticaNeue.ttc);
     }
+
+    #sec10{
+      width: 100%; display: flex; margin-top: 50px;
+    }
+
+  .news-card-con{
+    display: flex; justify-content: space-between; margin-top: -80px;
+  }
+
+    .i-card-one-con{
+      width: 40%;
+    }
+
+    .industrie-con{
+      display: flex;
+    }
+
+    .product-card{
+      width: calc(80vw / 3)
+    }
+
+    #sec6{
+      width: 30%; margin-top: 40px 
+    }
+
+    .intra1{
+      position: absolute; top: 10px; left: 26%;
+    }
+
+    .intra2{
+      position: absolute; top: 10px; left: 58%;
+    }
+
+    .intra3{
+      position: absolute; top: 160px; left: 5%;
+    }
+
+    .intra4{
+      position: absolute; top: 130px; right: 0%;
+    }
+
+    .intra5{
+      position: absolute; top: 350px; left: 13%;
+    }
+
+    .intra6{
+      position: absolute; top: 300px; right: 5%;
+    }
+
+    .intra7{
+      position: absolute; top: 440px; right: 33%;
+    }
+
+    .intra8{
+      position: absolute; top: 230px; right: 42%;
+      
+    }
+
+.leader-card{
+  width: calc(65vw / 3)
+}
+
+    #sec4{
+      margin-left: 2%;
+      margin-top: -120px; 
+    }
+
+    .misson-1{
+      width: 25%;
+    }
+
+    .misson-2{
+      width: 30%;
+    }
+
+    .misson-3{
+      width: 55%;
+    }
+
+    .about-us-con{
+      display: flex;
+    }
+
+    .main-text{
+      top: 50%;
+       left: 50px;
+        width: 400px;
+    }
+
+    .circle{
+      width: 500px;
+      height: 500px;
+    }
+    .circle-con{
+      margin-bottom: 20px;
+    }
     html{
   scroll-behavior: smooth;
 
     }
+
+    .about-us{
+      width: 50%;
+    }
+
+    #sec9{
+      display: flex;
+    }
+
+    .sec10-one{
+      width: 40%;
+    }
+
+    .sec10-two{
+      width: 56%;
+    }
+
+    #sec11{
+      display: flex;
+    }
+
+    .footer{
+      display: flex;
+      height: 80px;
+    }
+    .news-card{
+      width: calc(100% / 3); height: 300px;
+    }
+    .news-card-image{
+      height: 200px;  width: calc(80vw / 3) ;
+    }
+    @media screen and (min-device-width: 360px) and (max-device-width: 512px)  { 
+
+      .news-card{
+        width: 800px !important; height: 300px;
+      }
+
+      .news-card-image{
+        height: 200px;  width: calc(90vw / 1);
+      }
+
+      .strokeme1{
+        font-size: 26px !important;
+      }
+
+      #sec11{
+        display: block;
+      }
+
+      .footer{
+        display: block;
+        height: 120px;
+        padding-left: 90px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .sec10-one{
+        width: 80%;
+        margin-bottom: 20px;
+      }
+
+      .sec10-two{
+        width: 95%;
+        height: 420px;
+      }
+
+      #sec10{
+         display: block;
+      }
+
+      .news-card-con{
+        display: block; justify-content: space-between; margin-top: -40px;
+      }
+
+      #sec9{
+        display: block;
+      }
+
+      .strokemenews{
+        font-size: 112px !important;
+      }
+
+      .circle{
+        width: 300px;
+        height: 300px;
+      }
+
+      .circle-con{
+        margin-bottom: 0px;
+      }
+
+      .i-card-one-con{
+        width: 70%;
+      }
+
+      .industrie-con{
+        display: block;
+      }
+
+      /* .product-card{
+        width: calc(80vw / 1) !important
+      } */
+
+      #sec6{
+        width: 30%; margin-top: 170px 
+      }
+
+      .intra1{
+        position: absolute; top: 10px; left: 0%;
+      }
+
+      .intra2{
+        position: absolute; top: 160px; left: 0%;
+      }
+  
+      .intra3{
+        position: absolute; top: 310px; left: 0%;
+      }
+
+      .intra4{
+        position: absolute; top: 460px; left: 0%;
+      }
+  
+      .intra5{
+        position: absolute; top: 620px; left: 0%;
+      }
+  
+      .intra6{
+        position: absolute; top: 780px; left: 0%;
+        display: none;
+      }
+  
+      .intra7{
+        position: absolute; top: 920px; left: 0%;
+        display: none;
+      }
+
+      .intra8{
+        position: absolute; top: -70px; left: 42%;
+        display: none;
+      }
+
+      .intra-card{
+        width: 300px !important;
+        height: 100px !important;
+      }
+
+      .leader-card{
+        width: calc(65vw / 1)
+      }
+
+      #sec4{
+        margin-left: 2%;
+        margin-top: -90px; 
+      }
+
+      .strokeme{
+        font-size: 82px !important;
+      }
+
+      .misson-1{
+        width: 100%;
+      }
+  
+      .misson-2{
+        width: 100%;
+      }
+  
+      .misson-3{
+        width: 100%;
+      }
+
+      .about-us{
+        width: 100% !important;
+      }
+
+      .about-us-con{
+        display: block;
+      }
+     
+      .image-container{
+        width: 100% !important;
+        height: 100vh;
+      }
+      .image-container2{
+        display: none;
+      }
+      .main-text{
+        top: 35%;
+         left: 15%;
+          width: 300px;
+      }
+  }
+
+    @media screen and (min-device-width: 1024px)  { 
+     
+      .image-container{
+        width: 77% !important;
+        height: 100vh;
+        
+        
+      }
+      .main-text{
+        top: 50%;
+         left: 12%;
+          width: 400px;
+      }
+  }
+
+    @media screen and (min-device-width: 1280px)  { 
+     
+      .image-container{
+        width: 64% !important;
+        height: 100vh;
+        
+        
+      }
+      .main-text{
+        top: 50%;
+         left: 10%;
+          width: 400px;
+      }
+  }
+
+    @media screen and (min-device-width: 1366px)  { 
+     
+      .image-container{
+        width: 59% !important;
+        height: 100vh;
+        
+        
+      }
+  }
+
+    @media screen and (min-device-width: 1440px)  { 
+      .circle{
+        width: 600px;
+        height: 600px;
+      }
+      .circle-con{
+        margin-bottom: 120px;
+      }
+      .image-container{
+        width: 64% !important;
+        height: 100vh;
+        
+        
+      }
+  }
+
+  @media screen and (min-device-width: 1680px)  { 
+    .circle{
+      width: 700px;
+      height: 700px;
+    }
+    .circle-con{
+      margin-bottom: 250px;
+
+    }
+    .main-text{
+      top: 50%;
+       left: 18%;
+        width: 400px;
+    }
+    
+}
+
+@media screen and (min-device-width: 1920px)  { 
+  .circle{
+    width: 700px;
+    height: 700px;
+    margin-bottom: 30px;
+  }
+  .circle-con{
+    margin-bottom: 300px;
+  }
+}
+
+@media screen and (min-device-width: 2560px)  { 
+  .circle{
+    width: 900px;
+    height: 900px;
+    margin-bottom: 30px;
+  }
+  .circle-con{
+    margin-bottom: 300px;
+  }
+}
 
 body{
   padding: 0;
@@ -53,6 +438,7 @@ body{
   width: 70%;
   position: absolute;
   left: 30%;
+  top: 3px;
   
  
  
@@ -103,6 +489,16 @@ width: 100%;
 
 }
 
+.strokemenews {
+  color: lightgray;
+  margin: 0;
+	font-size: 242px;
+	text-shadow: -1px 1px 0 #15ae66,
+				  1px 1px 0 #15ae66,
+				 1px -1px 0 #15ae66,
+				-1px -1px 0 #15ae66;
+}
+
 .strokeme {
   color: lightgray;
   margin: 0;
@@ -125,9 +521,10 @@ width: 100%;
 }
 
 .image-hover:hover{
-  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
   transition: 700ms;
-scale: 1.5;
+  transform: scale(1.2, 1.3);
+  z-index: 999999;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 
 }
 
@@ -143,6 +540,7 @@ background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255
 
 .image-hover1:hover{
 background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255, 255, 0) 100%) !important;
+
 }
 
 .opacityOverlay {
@@ -150,7 +548,7 @@ background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 101%;
   z-index: 1;
   background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255, 255, 0) 30%);
 }
@@ -164,7 +562,7 @@ background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255
 }
 
 .intra-card{
-  width: 200px;
+  width: 230px;
   height: 70px;
   background-color: white;
   padding-left: 10px;
