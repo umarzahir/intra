@@ -3,6 +3,7 @@ import Logo from "./assets/white_full.png"
 import {HiMenuAlt1,HiArrowNarrowDown} from 'react-icons/hi'
 import MyDrawer from './component/Drawer';
 import AD from "./assets/Arrowup.svg"
+import CountUp from 'react-countup';
 import { useState } from 'react';
 import SectionTwo from './component/SectionTwo';
 import CM from "./assets/Chairman.jpeg"
@@ -16,6 +17,7 @@ import CLogo from "./assets/colored_full.png"
 import vpb from "./assets/VPb.jpeg"
 import vpe from "./assets/vpe.png"
 import j1 from "./assets/News Training .jpeg"
+import VisibilitySensor from 'react-visibility-sensor';
 import j2 from "./assets/News New CEO.jpg"
 import j3 from "./assets/News AKAER.jpeg"
 import {BsArrowRight, BsSendFill} from "react-icons/bs"
@@ -132,28 +134,28 @@ function App() {
         <IntraCard text={"Founded In"} number={"2013"}  />
       </div>
       <div className='intra2'>
-        <IntraCard text={"Development Hour"} number={"600,000+"}  />
+        <IntraCard text={"Development Hour"} number={"600000"} extraText="+"  />
       </div>
       <div className='intra3'>
-        <IntraCard text={"Engineering Project"} number={"5+"}  />
+        <IntraCard text={"Engineering Project"} number={"5"}  extraText="+"/>
       </div>
       <div className='intra4'>
-        <IntraCard text={"Development Projects"} number={"5+"}  />
+        <IntraCard text={"Development Projects"} number={"5"} extraText="+"  />
       </div>
 
       <div className='intra5'>
-        <IntraCard text={"UAV Traning Hours"} number={"68,000+"}  />
+        <IntraCard text={"UAV Traning Hours"} number={"68000"} extraText="+"  />
       </div>
       <div className='intra6'>
-        <IntraCard text={"Fight Hours"} number={"21+ Daily Hours"}  />
+        <IntraCard text={"Fight Hours"} number={"21"} extraText="+ Daily Hours"  />
       </div>
       <div className='intra7'>
-        <IntraCard text={"Manufacturing Capacity"} number={"278+ Yearly"}  />
+        <IntraCard text={"Manufacturing Capacity"} number={"278"}  extraText="+ Yearly" />
       </div>
 
       <div className='intra8'>
         <p> <span style={{ fontSize: "24px", color: "#15ae66", fontWeight: "600" }}>INTRA</span>
-       <span style={{ color: "rgb(3, 37, 76)", fontWeight: "600" }}> In Nubmers </span>
+       <span style={{ color: "rgb(3, 37, 76)", fontWeight: "600" }}> In Numbers </span>
         </p>
       </div>
     </div>
@@ -191,15 +193,15 @@ function App() {
       </div>
       <div className="industrie-con" style={{ width: "100%" }}>
         <div className='i-card-one-con' style={{  padding: "20px", marginRight: "4%" }}>
-         <NewCard width='100%' logo={<GiOilPump  color='#15ae66' fontSize={48}/>} name="Oil and Gas"   desc="UAVs transform the oil and gas industry by enhancing inspections and operational efficiencies. Equipped with advanced sensors, they monitor infrastructure, detect leaks, and enable rapid data collection. Real-time insights empower informed decision-making, optimizing maintenance and mitigating risks."  />
+         <NewCard className="oil-and-gas" width='100%' logo={<GiOilPump  color='#15ae66' fontSize={48}/>} name="Oil and Gas"   desc="UAVs transform the oil and gas industry by enhancing inspections and operational efficiencies. Equipped with advanced sensors, they monitor infrastructure, detect leaks, and enable rapid data collection. Real-time insights empower informed decision-making, optimizing maintenance and mitigating risks."  />
          <div style={{ marginTop: "35px" }}>
-         <NewCard logo={<PiTreeEvergreenFill  color='#15ae66' fontSize={48}/>} name="Environment" desc="UAVs revolutionize environmental and agricultural applications, optimizing data collection and informed decision-making. They monitor ecosystems, aid conservation, and enhance precision agriculture. With real-time data and aerial perspective, UAVs promote sustainability and boost agricultural productivity." />
+         <NewCard className="env" logo={<PiTreeEvergreenFill  color='#15ae66' fontSize={48}/>} name="Environment" desc="UAVs revolutionize environmental and agricultural applications, optimizing data collection and informed decision-making. They monitor ecosystems, aid conservation, and enhance precision agriculture. With real-time data and aerial perspective, UAVs promote sustainability and boost agricultural productivity." />
          </div>
         </div>
-        <div style={{ width: "60%", padding: "20px", marginTop: "100px" ,marginRight: "8%" }}>
-        <NewCard width={"100%"}  logo={<MdSecurity  color='#15ae66' fontSize={48}/>} name="Security" desc="UAVs enhance security operations with advanced sensors, enabling real-time aerial monitoring for improved surveillance capabilities and proactive threat response. They are deployed for border surveillance, event security, and protecting critical infrastructure, ensuring effective security measures and public safety." />
+        <div className="security-con" style={{ width: "60%", padding: "20px", marginTop: "100px" ,marginRight: "8%" }}>
+        <NewCard className="security" width={"100%"}  logo={<MdSecurity  color='#15ae66' fontSize={48}/>} name="Security" desc="UAVs enhance security operations with advanced sensors, enabling real-time aerial monitoring for improved surveillance capabilities and proactive threat response. They are deployed for border surveillance, event security, and protecting critical infrastructure, ensuring effective security measures and public safety." />
          <div style={{ marginTop: "35px" }}>
-         <NewCard  width={"100%"} logo={<SiHomeassistant  color='#15ae66' fontSize={48}/>} name="Smart Cities" desc={"UAVs play a crucial role in smart city development, aiding urban planning, infrastructure monitoring, and public safety. With advanced sensors, they efficiently collect data for mapping and surveying. UAVs improve emergency response and offer aerial surveillance for traffic monitoring. They optimize efficiency, promote sustainability, and enhance residents' quality of life in smart cities."} />
+         <NewCard className="security"  width={"100%"} logo={<SiHomeassistant  color='#15ae66' fontSize={48}/>} name="Smart Cities" desc={"UAVs play a crucial role in smart city development, aiding urban planning, infrastructure monitoring, and public safety. With advanced sensors, they efficiently collect data for mapping and surveying. UAVs improve emergency response and offer aerial surveillance for traffic monitoring. They optimize efficiency, promote sustainability, and enhance residents' quality of life in smart cities."} />
          </div>
         </div>
       </div>
@@ -388,9 +390,9 @@ function App() {
 
 export default App;
 
-const NewCard = ({name,desc,logo, width="350px", height="250px"}) => {
+const NewCard = ({className,name,desc,logo, width="350px", height="250px"}) => {
   return(
-    <div style={{ width: width, height: height, background: "#03254c", paddingLeft: "30px", paddingRight: "15px", paddingTop: '20px', paddingBottom: '20px' }}>
+    <div className={className} style={{ width: width, height: height, background: "#03254c", paddingLeft: "30px", paddingRight: "15px", paddingTop: '20px', paddingBottom: '20px' }}>
     {logo}
     <p style={{ color: "#15ae66", fontWeight: "600" }}>{name}</p>
     <p style={{ color: "white", fontWeight: "500" }}> {desc} </p>
@@ -416,11 +418,20 @@ const Card = ({image,name, desg,hoverText, width="calc(80vw / 3)", height="350"}
   )
 }
 
-const IntraCard = ({text,number}) => {
+const IntraCard = ({text,number,extraText}) => {
   return(
     <div className='intra-card'>
       <p style={{ color: "lightgray", fontWeight: "600" }}>{text}</p>
-      <p style={{ fontSize: "24px", fontWeight: "600" }}>{number}</p>
+      <p style={{ fontSize: "24px", fontWeight: "600" }}>{
+         <CountUp end={number} redraw={true}>
+         {({ countUpRef, start }) => (
+             <VisibilitySensor onChange={start} delayedCall>
+                 <span ref={countUpRef}>
+                 </span>
+             </VisibilitySensor>
+         )}
+     </CountUp>
+      }</p> <p>{extraText}</p>
       <div className='intra-card-logo'>
         <img src={A}  />
       </div>

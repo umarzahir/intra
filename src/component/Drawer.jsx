@@ -28,11 +28,7 @@ export default function MyDrawer({open, onClose, }) {
                   onClose("leader")
                 }}
                 >Leaders</li>
-                <li
-                onClick={() => {
-                  onClose("intra")
-                }}
-                >Intra In Numbers</li>
+               
                 <li
                  onClick={() => {
                   onClose("prod")
@@ -57,7 +53,7 @@ export default function MyDrawer({open, onClose, }) {
                  onClick={() => {
                   onClose("career")
                 }}
-                >Carrers</li>
+                >Careers</li>
                 <li
                  onClick={() => {
                   onClose("contact")

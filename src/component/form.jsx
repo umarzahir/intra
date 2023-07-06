@@ -5,15 +5,15 @@ import Dialog from '@mui/material/Dialog';
 export default function FormDialog({handleClose, open}) {
 
   return (
-       <Dialog onClose={handleClose} open={open}>
-         <div style={{ padding: "20px", paddingLeft: "100px" }}>
+       <Dialog onClose={handleClose} open={open} >
+         <div style={{ padding: "20px", paddingLeft: "100px"}} >
          <div style={{ background: "",width: "50%", marginTop: "40px" }}>
-              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"16px", fontWeight: 'bold' }}> NEWS </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"24px", fontWeight: 'bold' }}>Check Our Latest News</p>
+              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"24px", fontWeight: 'bold' }}>Apply Now</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
                 <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
                 </div>
             </div>
+            
                     <input placeholder='Name' type="text" className='input' />
                     <input placeholder='Email' type="email" className='input' />
                     <input placeholder='Phone Number' type="text" className='input' />
