@@ -281,7 +281,8 @@
       }
 
       .leader-card{
-        width: calc(65vw / 1)
+        width: calc(65vw / 1);
+        height: 350px;
       }
 
       #sec4{
