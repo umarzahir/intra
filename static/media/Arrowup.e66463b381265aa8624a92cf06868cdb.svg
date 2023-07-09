@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="39px" viewBox="0 0 21 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Arrow up</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="01_Home-draft" transform="translate(-717.000000, -9622.000000)" stroke="#060606" stroke-width="3">
+            <g id="Group-20" transform="translate(168.000000, 8872.000000)">
+                <g id="Icon" transform="translate(559.500000, 769.670993) rotate(-90.000000) translate(-559.500000, -769.670993) translate(542.000000, 761.000000)">
+                    <line x1="0" y1="8.67099342" x2="35" y2="8.67099342" id="Path-2"></line>
+                    <line x1="35" y1="8.67099342" x2="26.3290066" y2="0" id="Path-3" stroke-linejoin="round"></line>
+                    <line x1="35" y1="8.67099342" x2="26.3290066" y2="17.3419868" id="Path-4" stroke-linejoin="round"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
