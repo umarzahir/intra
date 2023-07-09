@@ -329,6 +329,9 @@
   }
 
     @media screen and (min-device-width: 1024px)  { 
+      .leader-card{
+        height: 360px;
+      }
      
       .image-container{
         width: 80% !important;
@@ -360,7 +363,27 @@
       .leader-card{
         height: 555px;
       }
-      
+      .intra4 {
+        top: 27%;
+        right: 12%;
+    }
+    .intra3 {
+      top: 43%;
+      left: 9%;
+  }
+
+  .intra5 {
+    top: 88%;
+    left: 20%;
+}
+.intra6 {
+  top: 75%;
+  right: 15%;
+}
+.intra7 {
+  top: 102%;
+  right: 37%;
+}
   }
 
     @media screen and (min-device-width: 1366px)  { 
@@ -968,26 +991,4 @@ background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255
   padding-left: 10px;
   padding-top: 15px;
 
-}
-
-.intra4 {
-  top: 27%;
-  right: 12%;
-}
-.intra3 {
-top: 43%;
-left: 9%;
-}
-
-.intra5 {
-top: 88%;
-left: 20%;
-}
-.intra6 {
-top: 75%;
-right: 15%;
-}
-.intra7 {
-top: 102%;
-right: 37%;
 }
