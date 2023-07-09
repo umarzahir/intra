@@ -8,6 +8,8 @@
     src: url(./assets//fonts//HelveticaNeue.ttc);
     }
 
+    
+
     #sec10{
       width: 100%; display: flex; margin-top: 50px;
     }
@@ -66,7 +68,10 @@
     }
 
 .leader-card{
-  width: calc(65vw / 3)
+  width: calc(65vw / 3);
+  position: relative;
+  height: 350px;
+  background: white;
 }
 
     #sec4{
@@ -345,17 +350,17 @@
       .image-container{
         width: 80% !important;
         height: 100vh;
-        
-        
       }
       .main-text{
         top: 35%;
-         /* left: 10%; */
-          /* width: 470px; */
       }
       .strokeme{
         font-size: 210px !important;
       }
+      .leader-card{
+        height: 555px;
+      }
+      
   }
 
     @media screen and (min-device-width: 1366px)  { 
@@ -611,11 +616,10 @@ background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255
 
 .intra-card{
   width: 230px;
-  height: 70px;
+  height: 120px;
   background-color: white;
-  padding-left: 10px;
+  padding-left: 20px;
   padding-top: 0px;
-  padding-bottom: 30px;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -964,4 +968,26 @@ background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255
   padding-left: 10px;
   padding-top: 15px;
 
+}
+
+.intra4 {
+  top: 27%;
+  right: 12%;
+}
+.intra3 {
+top: 43%;
+left: 9%;
+}
+
+.intra5 {
+top: 88%;
+left: 20%;
+}
+.intra6 {
+top: 75%;
+right: 15%;
+}
+.intra7 {
+top: 102%;
+right: 37%;
 }

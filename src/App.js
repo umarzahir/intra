@@ -64,7 +64,7 @@ function App() {
       <div className='con'>
         <div  style={{ display: 'flex', width: "100%", height: "80px", alignItems: "center", justifyContent: "space-between", zIndex: 999 }}>
           <div style={{ marginLeft: "80px" }}>
-            <img src={Logo} width={180}/>
+            <img src={Logo} width={280}/>
           </div>
           <div style={{ position: 'absolute', right: 0, marginRight: "30px", cursor: "pointer" }}onClick={() => setOpen(true)}>
           <HiMenuAlt1 fontSize={46} color='white' />
@@ -428,8 +428,8 @@ const NewCard = ({className,name,desc,logo, width="350px", height="250px"}) => {
 const Card = ({image,name, desg,hoverText, width="calc(80vw / 3)", height="350"}) => {
   const [isImageHover,setIsImageHover] = useState(false)
   return(
-    <div  onMouseEnter={() => setIsImageHover(true)} onMouseLeave={() => setIsImageHover(false)} className='image-hover leader-card' style={{ marginRight: "80px",  position: "relative", height: '350px', background: 'white', boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
-    <img height={"350"}   style={{ objectFit: "cover", width: "inherit" }}  src={image} />
+    <div  onMouseEnter={() => setIsImageHover(true)} onMouseLeave={() => setIsImageHover(false)} className='image-hover leader-card' style={{ marginRight: "80px",  boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
+    <img height={"100%"}   style={{ objectFit: "cover", width: "inherit" }}  src={image} />
 
     <div  style={{ position: "absolute",   zIndex: 2, bottom: "0px", left: "10px", color: "white", }}>
       <p style={{  fontWeight: "bold", marginBottom: "2px" }}>{name}</p>
