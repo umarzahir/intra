@@ -8,7 +8,7 @@ const SectionTwo = () => {
         <div className='about-us-con' style={{ paddingTop: "40px", paddingBottom: "40px" }}>
           <div className='about-us'>
            <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"16px", fontWeight: 'bold' }}> ABOUT US </p>
-           <p style={{ color: "#03254c", marginTop: "5px", fontSize:"24px", fontWeight: 'bold' }}>Driving Tomorrow's Technology, Today</p>
+           <p style={{ color: "rgb(30 60 95)", marginTop: "5px", fontSize:"24px", fontWeight: 'bold' }}>Driving Tomorrow's Technology, Today</p>
             <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
             <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
             </div>
@@ -34,7 +34,7 @@ const SectionTwo = () => {
             <div style={{ width: "140px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
             </div>
           </div>
-          <div className='misson-2' style={{ background: "#03254c", paddingTop: "60px", paddingBottom: "60px",paddingLeft: "20px"  }}>
+          <div className='misson-2' style={{ background: "rgb(3, 37, 76,0.9)", paddingTop: "60px", paddingBottom: "60px",paddingLeft: "20px"  }}>
            <p style={{ color: "white", marginTop: "25px", fontSize:"18px", fontWeight: 'bold' }}> VISION </p>
            <p style={{ color: "white", marginTop: "0px", fontSize:"14px", marginTop: "30px", lineHeight:"24px" }}>To revolutionize the way the world operates through the powrs of autonoums technologies.</p>
           </div>

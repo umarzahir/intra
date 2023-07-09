@@ -4,7 +4,7 @@ import {HiMenuAlt1,HiArrowNarrowDown} from 'react-icons/hi'
 import MyDrawer from './component/Drawer';
 import AD from "./assets/Arrowup.svg"
 import CountUp from 'react-countup';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import SectionTwo from './component/SectionTwo';
 import CM from "./assets/Chairman.jpeg"
 import CEO from "./assets/CEO.jpeg"
@@ -20,11 +20,11 @@ import j1 from "./assets/News Training .jpeg"
 import VisibilitySensor from 'react-visibility-sensor';
 import j2 from "./assets/News New CEO.jpg"
 import j3 from "./assets/News AKAER.jpeg"
-import {BsArrowRight, BsSendFill} from "react-icons/bs"
+import {BsArrowRight, BsSendFill, BsArrowLeftShort, BsArrowRightShort} from "react-icons/bs"
 import {GiOilPump,GiTeacher} from 'react-icons/gi'
 import {GrPersonalComputer,GrLinkedinOption} from "react-icons/gr"
 import {BiCheckShield,BiDoughnutChart,BiSolidPhone,BiLogoTwitter} from 'react-icons/bi'
-import {TbSettingsBolt} from "react-icons/tb" 
+import {TbRewindForward15, TbSettingsBolt} from "react-icons/tb" 
 import {GrSettingsOption,GrMapLocation} from "react-icons/gr"
 import FormDialog from './component/form';
 import {MdLocationOn,MdSecurity} from 'react-icons/md'
@@ -39,6 +39,25 @@ const oilandGasDetails="UAVs revolutionize environmental and agricultural applic
 function App() {
   const [open, setOpen] = useState(false)
   const [open1, setOpen1] = useState(false)
+
+  const ref1 = useRef()
+  const ref2 = useRef()
+
+  const scrollRightRef1 = (ref) => {
+     ref.current?.scrollTo({
+        left: 500,
+        behavior: 'smooth'
+    })
+  };
+
+  const scrollKeftRef1 = (ref) => {
+    ref.current?.scrollTo({
+       left: -500,
+       behavior: 'smooth'
+   })
+ };
+
+
   return (
     <div>
 
@@ -47,15 +66,15 @@ function App() {
           <div style={{ marginLeft: "80px" }}>
             <img src={Logo} width={180}/>
           </div>
-          <div style={{ marginRight: "30px", cursor: "pointer" }}onClick={() => setOpen(true)}>
+          <div style={{ position: 'absolute', right: 0, marginRight: "30px", cursor: "pointer" }}onClick={() => setOpen(true)}>
           <HiMenuAlt1 fontSize={46} color='white' />
           </div>
         </div>
       <div className='image-container' >
           <div className='one'>
           </div>
-          <div style={{ position: "absolute", }} className="main-text">
-            <p style={{  color: "white", fontSize: "36px", fontFamily: "HN", fontWeight: 600}}>"An Ambition as High as the Sky"</p>
+          <div style={{  display: "flex", justifyContent: "center", position: "absolute", width: "65%", left: "5%" ,right: '10%' }} className="main-text">
+            <p style={{  color: "white", fontSize: "calc(38px + 0.390625vw)", fontFamily: "AR", fontWeight: 500}}>"An Ambition as High as the Sky"</p>
           </div>
 
           <div style={{ position: "absolute", top: "90%", left: "50px" }}>
@@ -65,7 +84,7 @@ function App() {
             {/* <img style={{transform: "rotate(180deg)", color: "white" }} src={AD} /> */}
           </div>
 
-          <div style={{ position: "absolute", fontSize: "12px", top: "90%",  fontFamily: "HN", left: "78%", display: "flex" ,color: "white" , fontWeight: "600"}}>
+          <div style={{  position: "absolute", fontSize: "calc(12px + 0.390625vw)", top: "90%",  fontFamily: "HN", left: "70%", display: "flex" ,color: "white" , fontWeight: "600"}}>
           <p style={{ opacity: 0.5 }}>AR</p>
           <p style={{ marginLeft: "10px", }}>EN</p>
           </div>
@@ -96,11 +115,11 @@ function App() {
 
     <SectionTwo />
 
-    <div id="sec3" style={{ marginLeft: "8%", marginRight: "8%", }}>
+    <div id="sec3" style={{ marginLeft: "8%", marginRight: "1%", }}>
       <div className='about-us-con' style={{  paddingTop: "40px", paddingBottom: "0px" }}>
             <div className='mission-2' style={{  marginTop: "40px" }}>
-              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"16px", fontWeight: 'bold' }}> THE TEAM </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"24px", fontWeight: 'bold' }}>Meet Our Leader</p>
+              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(16px + 0.390625vw)", fontWeight: 'bold' }}> THE TEAM </p>
+              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Meet Our Leader</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
                 <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
                 </div>
@@ -114,8 +133,10 @@ function App() {
     </div>
 
     <div id="sec4">
-    <div className={"container"} style={{ paddingTop: "50px", paddingBottom: "50px" }}>
-      <div className={"scroll"}>
+    <button style={{ position: "absolute", left: 0, zIndex: 9999999, top: "50%" ,width: "50px", height: "50px", background: "rgba(225, 225, 225, 0.7)", borderRadius: "50%", border: "none", cursor: "pointer"  }} onClick={() => scrollKeftRef1(ref1)}><BsArrowLeftShort  fontSize={32}/></button>
+    <button style={{ position: "absolute", right: "0%", zIndex: 9999999999, top: "50%" ,width: "50px", height: "50px", background: "rgba(225, 225, 225, 0.7)", borderRadius: "50%", border: "none", cursor: "pointer"  }} onClick={() => scrollRightRef1(ref1)}><BsArrowRightShort  fontSize={32}/></button>
+    <div className={"container"} ref={ref1} style={{ paddingTop: "50px", paddingBottom: "50px" }}>
+      <div className={"scroll"} ref={ref1}>
         <div style={{paddingLeft: "6%", }}>
           <Card image={CM} name='Salman Alshathri' desg="Chairman" hoverText={chairmanDetails} />
         </div>
@@ -154,7 +175,7 @@ function App() {
       </div>
 
       <div className='intra8'>
-        <p> <span style={{ fontSize: "24px", color: "#15ae66", fontWeight: "600" }}>INTRA</span>
+        <p> <span style={{ fontSize: "calc(24px + 0.390625vw)", color: "#15ae66", fontWeight: "600" }}>INTRA</span>
        <span style={{ color: "rgb(3, 37, 76)", fontWeight: "600" }}> In Numbers </span>
         </p>
       </div>
@@ -162,14 +183,17 @@ function App() {
 
    <div style={{ marginLeft: "8%"  }}>
    <div id="sec6">
-              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"14px", fontWeight: 'bold' }}> Products </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"24px", fontWeight: 'bold' }}>Today and Beyond</p>
+              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(14px + 0.390625vw)", fontWeight: 'bold' }}> Products </p>
+              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Today and Beyond</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
                 <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
                 </div>
             </div>
-   <div className={"container"}>
-      <div className={"scroll"}>
+            <div style={{ position: "relative" }}>
+   <button style={{ position: "absolute", left: "-1%", zIndex: 9999999999, top: "40%" ,width: "50px", height: "50px", background: "rgba(225, 225, 225, 0.7)", borderRadius: "50%", border: "none", cursor: "pointer"  }} onClick={() => scrollKeftRef1(ref2)}><BsArrowLeftShort  fontSize={32}/></button>
+    <button style={{ position: "absolute", right: "0%", zIndex: 9999999999, top: "40%" ,width: "50px", height: "50px", background: "rgba(225, 225, 225, 0.7)", borderRadius: "50%", border: "none", cursor: "pointer"  }} onClick={() => scrollRightRef1(ref2)}><BsArrowRightShort  fontSize={32}/></button>
+   <div className={"container"} ref={ref2} >
+      <div className={"scroll"} ref={ref2}>
       <div style={{  marginTop: "20px", }}>
          <ProductCard  name='Tactical' image={Prod1} hoverText={acticalDetails} />
          </div>
@@ -183,10 +207,11 @@ function App() {
         
       </div>
     </div>
+    </div>
 
     <div id="sec7" style={{ background: "",width: "30%", marginTop: "70px", marginBottom: "30px" }}>
-              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"14px", fontWeight: 'bold' }}> INDUSTRIES </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"24px", fontWeight: 'bold' }}>Distinctive Value</p>
+              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(14px + 0.390625vw)", fontWeight: 'bold' }}> INDUSTRIES </p>
+              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Distinctive Value</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
                 <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
                 </div>
@@ -208,8 +233,8 @@ function App() {
 
 
       <div id="sec8" style={{ background: "",width: "30%", marginTop: "70px", marginBottom: "30px" }}>
-              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"14px", fontWeight: 'bold' }}> Capabilities </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"24px", fontWeight: 'bold' }}>Complete UAS Mastery</p>
+              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(14px + 0.390625vw)", fontWeight: 'bold' }}> Capabilities </p>
+              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Complete UAS Mastery</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
                 <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
                 </div>
@@ -217,21 +242,21 @@ function App() {
 <div className='circle-con' style={{ display: "flex", width: "100%", height: "500px", justifyContent: "center",  marginTop: "30px" }}>
 
       <div className='circle' style={{  position: "absolute", display: "flex", justifyContent: "center", marginRight: "8%", alignItems: "center", flexDirection: "column", borderRadius: "50%", border: "3px solid #15ae66" }}>
-        <p style={{ fontWeight: "600", color: "#03254c", fontSize: "32px", marginBottom: "0px" }}> UAS</p>
-        <p style={{ fontWeight: "600", color: "#15ae66",  fontSize: "32px", marginTop: "0px" }}>360</p>
+        <p style={{ fontWeight: "600", color: "#03254c", fontSize: "calc(32px + 0.390625vw)", marginBottom: "0px" }}> UAS</p>
+        <p style={{ fontWeight: "600", color: "#15ae66",  fontSize: "calc(32px + 0.390625vw)", marginTop: "0px" }}>360</p>
 
         <div style={{ width: "70px",  display: "flex", justifyContent: "center", alignItems: "center", height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "3%", left: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
           <BiDoughnutChart fontSize={42} color="#03254c" />
         </div>
         <div style={{  position: "absolute", top: "20%", left: "12%",  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "22", }}>Enginerring</p>
+          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Enginerring</p>
         </div>
         <div style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "3%", right: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
           <GrSettingsOption fontSize={42}  color= "#03254c"/>
         </div>
 
         <div style={{  position: "absolute", top: "20%", right: "12%",  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "22", }}>Maintaince</p>
+          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Maintaince</p>
         </div>
 
         <div style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "40%", right: "-9%", borderRadius: "50%", border: "3px solid #15ae66" }}>
@@ -239,27 +264,27 @@ function App() {
         </div>
 
         <div style={{  position: "absolute", top: "53%", right: "-30%", width: "100px"  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "22", }}>Design & Development</p>
+          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Design & Development</p>
         </div>
         <div style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center", height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "40%", left: "-9%", borderRadius: "50%", border: "3px solid #15ae66" }}>
           <TbSettingsBolt fontSize={42} />
         </div>
 
         <div style={{  position: "absolute", top: "53%", left: "-26%", width: "100px"  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "22", }}>Opearations</p>
+          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Opearations</p>
         </div>
 
         <div style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", bottom: "3%", left: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
           <GiTeacher fontSize={42} />
         </div>
         <div style={{  position: "absolute", bottom: "-9%", left: "12%", width: "100px"  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "22", }}>Traning</p>
+          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Traning</p>
         </div>
         <div style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", bottom: "3%", right: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
         <TbSettingsBolt fontSize={42} />
         </div>
         <div style={{  position: "absolute", bottom: "-9%", right: "7%", width: "100px"  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "22", }}>Manufactoring</p>
+          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Manufactoring</p>
         </div>
       </div>
 </div>
@@ -267,8 +292,8 @@ function App() {
 
 <div id="sec9" style={{   paddingTop: "40px", paddingBottom: "0px" , marginBottom: "0px",marginRight: "5%"}}>
             <div style={{ width: "50%", marginTop: "40px" }}>
-              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"16px", fontWeight: 'bold' }}> NEWS </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"24px", fontWeight: 'bold' }}>Check Our Latest News</p>
+              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(16px + 0.390625vw)", fontWeight: 'bold' }}> NEWS </p>
+              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Check Our Latest News</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
                 <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
                 </div>
@@ -310,8 +335,8 @@ function App() {
 
             <div id="sec10">
             <div className='sec10-one'>
-              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"16px", fontWeight: 'bold' }}> CAREERS </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"24px", fontWeight: 'bold' }}>Join Us</p>
+              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(16px + 0.390625vw)", fontWeight: 'bold' }}> CAREERS </p>
+              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Join Us</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
                 <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
                 </div>
@@ -408,9 +433,9 @@ const Card = ({image,name, desg,hoverText, width="calc(80vw / 3)", height="350"}
 
     <div  style={{ position: "absolute",   zIndex: 2, bottom: "0px", left: "10px", color: "white", }}>
       <p style={{  fontWeight: "bold", marginBottom: "2px" }}>{name}</p>
-      <p style={{ color: "white", marginTop: "5px", fontSize: "14px",   }}>{desg}</p>
+      <p style={{ color: "white", marginTop: "5px", fontSize: "calc(14px + 0.390625vw)",   }}>{desg}</p>
       {isImageHover && 
-      <p style={{  color: "white",fontSize: "9px", transition: "ease-in-out" }}>{hoverText}</p>
+      <p style={{  color: "white",fontSize: "calc(9px + 0.390625vw)", transition: "ease-in-out" }}>{hoverText}</p>
       }
   </div>
     <div className="opacityOverlay"></div>
@@ -422,7 +447,7 @@ const IntraCard = ({text,number,extraText}) => {
   return(
     <div className='intra-card'>
       <p style={{ color: "lightgray", fontWeight: "600" }}>{text}</p>
-      <p style={{ fontSize: "24px", fontWeight: "600" }}>{
+      <p style={{ fontSize: "calc(24px + 0.390625vw)", fontWeight: "600" }}>{
          <CountUp end={number} redraw={true}>
          {({ countUpRef, start }) => (
              <VisibilitySensor onChange={start} delayedCall>
@@ -446,10 +471,10 @@ const ProductCard = ({width =  "320", height = "320" , image, name="", hoverText
     <div  onMouseLeave={() => setIsImageHover(false)} className='image-hover1 product-card' style={{marginRight: "35px",  position: "relative", height: '280px', background: 'white', boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
     <img height={height}  style={{ objectFit: "contain", width: "300px",opacity: 0.5, }} src={image} />
     <div  style={{ opacity: 1, position: "absolute",  zIndex: 2, bottom: "30px", left: "30px", color: isImageHover ? "#15ae66" : "#263770", }}>
-      <p style={{ fontSize: "22px", fontWeight: "bold", marginBottom: "5px" }}>{name}</p>
+      <p style={{ fontSize: "calc(22px + 0.390625vw)", fontWeight: "bold", marginBottom: "5px" }}>{name}</p>
       <BsArrowRight style={{ display: isImageHover ? "none" : "", cursor : 'pointer', opacity: 1, }} onClick={() => setIsImageHover(true)}  fontSize={26}/>
       {isImageHover && 
-      <p style={{  color: "white",fontSize: "12px", paddingRight: "15px", fontWeight: "600", lineHeight: "20px", transition: "ease-in-out" }}>{hoverText}</p>
+      <p style={{  color: "white",fontSize: "calc(12px + 0.390625vw)", paddingRight: "15px", fontWeight: "600", lineHeight: "20px", transition: "ease-in-out" }}>{hoverText}</p>
       }
   </div>
     {/* <div className="opacityOverlay"></div> */}

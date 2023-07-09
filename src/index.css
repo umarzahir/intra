@@ -72,6 +72,8 @@
     #sec4{
       margin-left: 2%;
       margin-top: -120px; 
+      position: relative;
+      /* display: none; */
     }
 
     .misson-1{
@@ -91,9 +93,9 @@
     }
 
     .main-text{
-      top: 50%;
-       left: 50px;
-        width: 400px;
+      top: 35%;
+       /* left: 50px; */
+        /* width: 470px; */
     }
 
     .circle{
@@ -280,6 +282,7 @@
       #sec4{
         margin-left: 2%;
         margin-top: -90px; 
+        display: none;
       }
 
       .strokeme{
@@ -311,52 +314,58 @@
         height: 100vh;
       }
       .image-container2{
-        display: none;
+        /* display: none; */
       }
       .main-text{
         top: 35%;
-         left: 15%;
-          width: 300px;
+         /* left: 15%; */
+          /* width: 300px; */
       }
   }
 
     @media screen and (min-device-width: 1024px)  { 
      
       .image-container{
-        width: 77% !important;
+        width: 80% !important;
         height: 100vh;
-        
         
       }
       .main-text{
-        top: 50%;
-         left: 12%;
-          width: 400px;
+        top: 35%;
+         /* left: 12%; */
+          /* width: 470px; */
+      }
+      .strokeme{
+        font-size: 165px !important;
       }
   }
 
     @media screen and (min-device-width: 1280px)  { 
      
       .image-container{
-        width: 64% !important;
+        width: 80% !important;
         height: 100vh;
         
         
       }
       .main-text{
-        top: 50%;
-         left: 10%;
-          width: 400px;
+        top: 35%;
+         /* left: 10%; */
+          /* width: 470px; */
+      }
+      .strokeme{
+        font-size: 210px !important;
       }
   }
 
     @media screen and (min-device-width: 1366px)  { 
      
       .image-container{
-        width: 59% !important;
+        width: 80% !important;
         height: 100vh;
-        
-        
+      }
+      .strokeme{
+        font-size: 240px !important;
       }
   }
 
@@ -369,10 +378,11 @@
         margin-bottom: 120px;
       }
       .image-container{
-        width: 64% !important;
+        width: 80% !important;
         height: 100vh;
-        
-        
+      }
+      .strokeme{
+        font-size: 255px !important;
       }
   }
 
@@ -381,14 +391,19 @@
       width: 700px;
       height: 700px;
     }
+
     .circle-con{
       margin-bottom: 250px;
 
     }
     .main-text{
-      top: 50%;
-       left: 18%;
-        width: 400px;
+      top: 35%;
+       /* left: 18%; */
+        /* width: 470px; */
+    }
+
+    .strokeme{
+      font-size: 300px !important;
     }
     
 }
@@ -402,6 +417,9 @@
   .circle-con{
     margin-bottom: 300px;
   }
+  .strokeme{
+    font-size: 355px !important;
+  }
 }
 
 @media screen and (min-device-width: 2560px)  { 
@@ -412,6 +430,9 @@
   }
   .circle-con{
     margin-bottom: 300px;
+  }
+  .strokeme{
+    font-size: 240px !important;
   }
 }
 
@@ -443,6 +464,7 @@ body{
   background-image: url("/public/Header.png"); 
   /* object-fit: contain; */
   height: 100%;
+  width: 100%;
   background-size: cover ;
    background-repeat: no-repeat;
   /* z-index: 999999 !important; */
@@ -453,14 +475,21 @@ body{
 .image-container2{
   background-color: blue;
   height: 100vh;
-  width: 70%;
-  position: absolute;
-  left: 30%;
+  width: 100%;
+  /* position: absolute; */
+  /* left: 30%; */
   top: 3px;
-  
- 
- 
-  
+}
+
+.image-container2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12%;
+  background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 80%);
+
 }
 
 .two{
@@ -520,6 +549,7 @@ width: 100%;
 .strokeme {
   color: lightgray;
   margin: 0;
+  margin-left: 15%;
 	font-size: 202px;
 	text-shadow: -1px 1px 0 #15ae66,
 				  1px 1px 0 #15ae66,
@@ -919,7 +949,7 @@ background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255
 
 .MuiPaper-root{
   /* width: 600px; */
-  max-width: 800px !important;
+  max-width: 900px !important;
 }
 
 .textarea{
