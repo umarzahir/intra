@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/intra/static/css/main.7c068d66.css",
-    "main.js": "/intra/static/js/main.cc7f8e94.js",
+    "main.css": "/intra/static/css/main.5fff61ed.css",
+    "main.js": "/intra/static/js/main.6905f7be.js",
     "static/js/787.8fe4a300.chunk.js": "/intra/static/js/787.8fe4a300.chunk.js",
     "static/media/Home.png": "/intra/static/media/Home.c4a44ed6d661a4356e93.png",
     "static/media/HelveticaNeue.ttc": "/intra/static/media/HelveticaNeue.67d426c3bd180e2ea838.ttc",
@@ -20,16 +20,22 @@
     "static/media/CEO.jpeg": "/intra/static/media/CEO.8f84c2a06eed4a2347d0.jpeg",
     "static/media/Chairman.jpeg": "/intra/static/media/Chairman.f116fe55d28fd974714a.jpeg",
     "static/media/white_full.png": "/intra/static/media/white_full.e9d706488ca012fb05d4.png",
+    "static/media/cogwheel.png": "/intra/static/media/cogwheel.f5b83cd467a943b3fa25.png",
+    "static/media/maintenance.png": "/intra/static/media/maintenance.fa8cb79e3ea3d2f13223.png",
+    "static/media/technology.png": "/intra/static/media/technology.fa1c16dd3db99e4e7aa1.png",
+    "static/media/manufacture.png": "/intra/static/media/manufacture.ae6e2f9cb5eebbe39254.png",
+    "static/media/training.png": "/intra/static/media/training.9467a721d2874d9a922f.png",
     "static/media/News New CEO.jpg": "/intra/static/media/News New CEO.80e33f6baa9bb2c3d539.jpg",
+    "static/media/data.png": "/intra/static/media/data.bfcdc2a04b09ff4a5201.png",
     "static/media/3 User 1.svg": "/intra/static/media/3 User 1.60c3d030202aeef4ce5b4ad15cd8d5f8.svg",
     "static/media/Arrowup.svg": "/intra/static/media/Arrowup.e66463b381265aa8624a92cf06868cdb.svg",
     "index.html": "/intra/index.html",
-    "main.7c068d66.css.map": "/intra/static/css/main.7c068d66.css.map",
-    "main.cc7f8e94.js.map": "/intra/static/js/main.cc7f8e94.js.map",
+    "main.5fff61ed.css.map": "/intra/static/css/main.5fff61ed.css.map",
+    "main.6905f7be.js.map": "/intra/static/js/main.6905f7be.js.map",
     "787.8fe4a300.chunk.js.map": "/intra/static/js/787.8fe4a300.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c068d66.css",
-    "static/js/main.cc7f8e94.js"
+    "static/css/main.5fff61ed.css",
+    "static/js/main.6905f7be.js"
   ]
 }
