@@ -132,8 +132,8 @@ function App() {
      <div id="sec3" style={{ marginLeft: "8%", marginRight: "1%", }}>
       <div className='about-us-con' style={{  paddingTop: "40px", paddingBottom: "0px" }}>
             <div className='mission-2' style={{  marginTop: "40px" }}>
-              <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(16px + 0.390625vw)", fontWeight: 'bold' }}> THE TEAM </p>
-              <p style={{ color: "#263671", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Meet Our Leader</p>
+              <p style={{ color: "#15ae66", marginBottom: "30px", fontSize:"calc(16px + 0.390625vw)", fontWeight: 'bold' }}> THE TEAM </p>
+              <p className='innvotive-text' style={{ marginTop: "5px",  }}>Meet Our Leader</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
                 <div style={{ width: "200px", borderBottom: '2px solid #263671', marginTop: "10px" }}>
                 </div>
@@ -452,10 +452,10 @@ const Card = ({image,name, desg,hoverText, width="calc(80vw / 3)", height="350"}
     <img height={"100%"}   style={{ objectFit: "cover", width: "inherit" }}  src={image} />
 
     <div  style={{ position: "absolute",   zIndex: 2, bottom: "0px", left: "10px", color: "white", }}>
-      <p style={{  fontWeight: "bold", marginBottom: "2px" }}>{name}</p>
-      <p style={{ color: "white", marginTop: "5px", fontSize: "calc(14px + 0.390625vw)",   }}>{desg}</p>
+      <p className='card-head' style={{  marginBottom: "2px", width: "100%" }}>{name}</p>
+      <p className='vis' style={{ color: "white", marginTop: "5px", height: "20px"  }}>{desg}</p>
       {isImageHover && 
-      <p style={{  color: "white",fontSize: "calc(9px + 0.390625vw)", transition: "ease-in-out" }}>{hoverText}</p>
+      <p className='lead-card.details' style={{width: '380px',  paddingBottom: "20px", color: "white", transition: "ease-in-out" }}>{hoverText}</p>
       }
   </div>
     <div className="opacityOverlay"></div>
@@ -477,8 +477,10 @@ const IntraCard = ({text,number,extraText}) => {
          )}
      </CountUp>
       }</p> <p>{extraText}</p>
-      <div className='intra-card-logo'>
-        <img style={{ opacity: 1 }} src={EngIcon}  />
+      <div className='intra-card-logo' style={{ backgroundColor: "" }}>
+        <div style={{ opacity: "1", position: "relative", width: "100%", height: "100%" }}>
+        <img style={{ opacity: 1, position: "absolute", top: 10 , left: 8}} height={"60%"} width={"60%"} src={EngIcon}  />
+        </div>
       </div>
     </div>
   )

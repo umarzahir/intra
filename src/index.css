@@ -7,6 +7,57 @@
     font-family: HN;
     src: url(./assets//fonts//HelveticaNeue.ttc);
     }
+.vis{
+  height: 163px;
+  width: 643px;
+  font-family: HN;
+  font-size: calc(19px + 0.390625vw);
+  letter-spacing: 0;
+  line-height: 34px;
+}
+
+.card-head{
+  height: 37px;
+  width: 300px;
+  font-family: HN;
+  font-size: calc(27px + 0.390625vw);
+  letter-spacing: 0;
+  line-height: 32px;
+  
+}
+
+.lead-card.details{
+  height: 170px;
+  max-width: 271px !important;
+  color: #FFFFFF;
+  font-family: HN;
+  font-size: 21px;
+  letter-spacing: 0;
+  line-height: 34px;
+}
+   
+
+    .innvotive-text{
+      /* height: 168px; */
+      width: 300px;
+      color: #263770;
+      font-weight: bold;
+      font-family: HN;
+      font-size: calc(39px + 0.390625vw);
+      letter-spacing: 0;
+      
+    }
+    .sec-head{
+      /* height: 19px; */
+      width: 150px;
+      color: #00A251;
+      font-family: HN;
+      font-weight: bold;
+      font-size: calc(19px + 0.390625vw);
+      letter-spacing: 0;
+      line-height: 23px;
+    }
+
 .ml-f{
 margin-left: 8%;
 }
@@ -465,6 +516,10 @@ margin-left: 8%;
   }
 
     @media screen and (min-device-width: 1280px)  { 
+
+      .lo{
+          width: 300px;
+      }
      
       .image-container{
         width: 80% !important;
@@ -477,7 +532,7 @@ margin-left: 8%;
         font-size: 210px !important;
       }
       .leader-card{
-        height: 455px;
+        height: 540px;
       }
       .intra4 {
         top: 27%;
@@ -683,7 +738,14 @@ width: 100%;
 }
 
 .strokemenews {
-  color: lightgray;
+  height: 404px;
+  width: 1263px;
+  color: #CCD0D1;
+  font-family: HN;
+  font-size: calc(400px + 0.390625vw);
+  letter-spacing: 0;
+  line-height: 480px;
+  text-align: right;
   margin: 0;
 	font-size: 242px;
 	text-shadow: -1px 1px 0 #15ae66,
@@ -696,11 +758,23 @@ width: 100%;
   color: lightgray;
   margin: 0;
   margin-left: 15%;
-	font-size: 202px;
+	font-size: 262px;
 	text-shadow: -1px 1px 0 #15ae66,
 				  1px 1px 0 #15ae66,
 				 1px -1px 0 #15ae66,
 				-1px -1px 0 #15ae66;
+}
+
+.strokemeno {
+  color: lightgray;
+  margin: 0;
+  margin-left: 15%;
+	font-size: 202px;
+font-weight: normal !important;
+	text-shadow: -1px 0.5px 0 lightgray,
+				  0.5px 0.5px 0 lightgray,
+				 0.5px -1px 0 lightgray,
+				-1px -1px 0 lightgray;
 }
 
 .strokeme1 {
@@ -718,7 +792,8 @@ width: 100%;
   transition: 700ms;
   transform: scale(1.2, 1.3);
   z-index: 999999;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255, 255, 0) 90%) !important;
+   
 
 }
 
@@ -729,7 +804,7 @@ width: 100%;
   width: 100%;
   height: 100%;
   z-index: 1;
-background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255, 255, 0) 100%) !important;
 }
 
 .image-hover1:hover{
@@ -744,10 +819,10 @@ background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255
   width: 100%;
   height: 101%;
   z-index: 1;
-  background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255, 255, 0) 30%);
+  background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255, 255, 0) 50%);
 }
 .opacityOverlay:hover { 
-background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255, 255, 0) 100%) !important;
 
 }
 
@@ -771,13 +846,13 @@ background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255
   width: 50px;
   /* background-color: rgb(174, 223, 174);
    */
-  background-color: #263770;
-opacity: 13%;
+  background-color: #eeeeef;
+/* opacity: 13%; */
   height: 50px;
   border-radius: 50%;
-  top: -9px;
+  top: -9px;  
   right: -9px;
-  display: flex;
+  
 }
 
 .productsContainer{
@@ -1070,6 +1145,7 @@ opacity: 13%;
 
 
 @media (max-width: 768px) {
+
   .greenBorderTransparentText {
     font-size: 100px !important; /* Adjust the font size as needed */
   }
