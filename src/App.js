@@ -30,6 +30,12 @@ import FormDialog from './component/form';
 import {MdLocationOn,MdSecurity} from 'react-icons/md'
 import {SiHomeassistant} from "react-icons/si"
 import {PiTreeEvergreenFill} from "react-icons/pi"
+import EngIcon from "./assets/technology.png"
+import MainIcon from "./assets/maintenance.png"
+import CogIcon from "./assets/cogwheel.png"
+import DesgIcon from "./assets/data.png"
+import TraIcon from "./assets/training.png"
+import MannuIcon from "./assets/manufacture.png"
 
 const chairmanDetails = "Our Chairman is a visionary leader with a vast experience and knowledge in the field of Advance technologies. With a passion for innovation and an unwavering commitment to excellence, he has played a pivotal role in shaping our company's growth and success. Under his guidance, our company continues to lead in the development and manufacturing of advanced technological solutions."
 const ceoDetails = "Our CEO brings a wealth of experience and expertise in leading and managing companies, He is committed to driving innovation and ensuring that our company's operations and services align with the highest standards of quality and efficiency. Under his leadership and direction."
@@ -62,9 +68,9 @@ function App() {
     <div>
 
       <div className='con'>
-        <div  style={{ display: 'flex', width: "100%", height: "80px", alignItems: "center", justifyContent: "space-between", zIndex: 999 }}>
+        <div  className='desktop-menu' style={{ display: 'flex', width: "100%", height: "80px", alignItems: "center", justifyContent: "space-between", zIndex: 999 }}>
           <div style={{ marginLeft: "80px" }}>
-            <img src={Logo} width={280}/>
+            <img src={Logo} className='lo' />
           </div>
           <div style={{ position: 'absolute', right: 0, marginRight: "30px", cursor: "pointer" }}onClick={() => setOpen(true)}>
           <HiMenuAlt1 fontSize={46} color='white' />
@@ -100,7 +106,15 @@ function App() {
        <a id="news"  href='#sec9'></a>
        <a id="career"  href='#sec10'></a>
        <a id="contact" href='#sec11'></a>
-      <div className='image-container2 header' >
+      <div className='image-container2 ' >
+        <div className='mobile-menu'>
+      <div style={{ marginLeft: "5px", position: "absolute", marginTop: "5px" }}>
+            <img src={Logo} className='lo' />
+          </div>
+          <div style={{ position: 'absolute', right: 0, marginRight: "30px", cursor: "pointer",marginTop: "5px" }}onClick={() => setOpen(true)}>
+          <HiMenuAlt1 fontSize={46} color='white' />
+          </div>
+          </div>
       <div className='two'></div>
       </div>
       <MyDrawer open={open}  onClose={(e) => {
@@ -113,15 +127,15 @@ function App() {
       
       </div>
 
-    <SectionTwo />
+     <SectionTwo /> 
 
-    <div id="sec3" style={{ marginLeft: "8%", marginRight: "1%", }}>
+     <div id="sec3" style={{ marginLeft: "8%", marginRight: "1%", }}>
       <div className='about-us-con' style={{  paddingTop: "40px", paddingBottom: "0px" }}>
             <div className='mission-2' style={{  marginTop: "40px" }}>
               <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(16px + 0.390625vw)", fontWeight: 'bold' }}> THE TEAM </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Meet Our Leader</p>
+              <p style={{ color: "#263671", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Meet Our Leader</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
-                <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
+                <div style={{ width: "200px", borderBottom: '2px solid #263671', marginTop: "10px" }}>
                 </div>
             </div>
             <div style={{ width: "70%", }}>
@@ -130,9 +144,9 @@ function App() {
             </p>
             </div>
       </div>
-    </div>
+    </div> 
 
-    <div id="sec4">
+     <div id="sec4">
     <button style={{ position: "absolute", left: 0, zIndex: 9999999, top: "50%" ,width: "50px", height: "50px", background: "rgba(225, 225, 225, 0.7)", borderRadius: "50%", border: "none", cursor: "pointer"  }} onClick={() => scrollKeftRef1(ref1)}><BsArrowLeftShort  fontSize={32}/></button>
     <button style={{ position: "absolute", right: "0%", zIndex: 9999999999, top: "50%" ,width: "50px", height: "50px", background: "rgba(225, 225, 225, 0.7)", borderRadius: "50%", border: "none", cursor: "pointer"  }} onClick={() => scrollRightRef1(ref1)}><BsArrowRightShort  fontSize={32}/></button>
     <div className={"container"} ref={ref1} style={{ paddingTop: "50px", paddingBottom: "50px" }}>
@@ -148,9 +162,9 @@ function App() {
       </div>
     </div>
     </div>
-    </div>
+    </div> 
 
-    <div id="sec5" style={{ height: "600px", position: "relative", marginLeft: "8%", marginTop: "10px", display: "flex", justifyContent: 'space-between', marginRight: "8%",  }}>
+     <div id="sec5" style={{ height: "600px", position: "relative", marginLeft: "8%", marginTop: "10px", display: "flex", justifyContent: 'space-between', marginRight: "8%",  }}>
       <div className='intra1'>
         <IntraCard text={"Founded In"} number={"2013"}  />
       </div>
@@ -179,17 +193,17 @@ function App() {
        <span style={{ color: "rgb(3, 37, 76)", fontWeight: "600" }}> In Numbers </span>
         </p>
       </div>
-    </div>
+    </div> 
 
-   <div style={{ marginLeft: "8%"  }}>
-   <div id="sec6">
+   <div className='ml-f'>
+    <div id="sec6">
               <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(14px + 0.390625vw)", fontWeight: 'bold' }}> Products </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Today and Beyond</p>
+              <p style={{ color: "#263671", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Today and Beyond</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
-                <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
+                <div style={{ width: "200px", borderBottom: '2px solid #263671', marginTop: "10px" }}>
                 </div>
-            </div>
-            <div style={{ position: "relative" }}>
+            </div> 
+           <div className='ml-m' style={{ position: "relative" }}>
    <button style={{ position: "absolute", left: "-1%", zIndex: 9999999999, top: "40%" ,width: "50px", height: "50px", background: "rgba(225, 225, 225, 0.7)", borderRadius: "50%", border: "none", cursor: "pointer"  }} onClick={() => scrollKeftRef1(ref2)}><BsArrowLeftShort  fontSize={32}/></button>
     <button style={{ position: "absolute", right: "0%", zIndex: 9999999999, top: "40%" ,width: "50px", height: "50px", background: "rgba(225, 225, 225, 0.7)", borderRadius: "50%", border: "none", cursor: "pointer"  }} onClick={() => scrollRightRef1(ref2)}><BsArrowRightShort  fontSize={32}/></button>
    <div className={"container"} ref={ref2} >
@@ -207,16 +221,16 @@ function App() {
         
       </div>
     </div>
-    </div>
+    </div> 
 
-    <div id="sec7" style={{ background: "",width: "30%", marginTop: "70px", marginBottom: "30px" }}>
+   <div className='ml-m' id="sec7" style={{ background: "",width: "30%", marginTop: "70px", marginBottom: "30px" }}>
               <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(14px + 0.390625vw)", fontWeight: 'bold' }}> INDUSTRIES </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Distinctive Value</p>
+              <p style={{ color: "#263671", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Distinctive Value</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
-                <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
+                <div style={{ width: "200px", borderBottom: '2px solid #263671', marginTop: "10px" }}>
                 </div>
-      </div>
-      <div className="industrie-con" style={{ width: "100%" }}>
+      </div> 
+       <div className="industrie-con" style={{ width: "100%" }}>
         <div className='i-card-one-con' style={{  padding: "20px", marginRight: "4%" }}>
          <NewCard className="oil-and-gas" width='100%' logo={<GiOilPump  color='#15ae66' fontSize={48}/>} name="Oil and Gas"   desc="UAVs transform the oil and gas industry by enhancing inspections and operational efficiencies. Equipped with advanced sensors, they monitor infrastructure, detect leaks, and enable rapid data collection. Real-time insights empower informed decision-making, optimizing maintenance and mitigating risks."  />
          <div style={{ marginTop: "35px" }}>
@@ -229,73 +243,76 @@ function App() {
          <NewCard className="security"  width={"100%"} logo={<SiHomeassistant  color='#15ae66' fontSize={48}/>} name="Smart Cities" desc={"UAVs play a crucial role in smart city development, aiding urban planning, infrastructure monitoring, and public safety. With advanced sensors, they efficiently collect data for mapping and surveying. UAVs improve emergency response and offer aerial surveillance for traffic monitoring. They optimize efficiency, promote sustainability, and enhance residents' quality of life in smart cities."} />
          </div>
         </div>
-      </div>
+      </div> 
 
 
-      <div id="sec8" style={{ background: "",width: "30%", marginTop: "70px", marginBottom: "30px" }}>
+       <div className='ml-m' id="sec8" style={{ background: "",width: "30%", marginTop: "70px", marginBottom: "30px" }}>
               <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(14px + 0.390625vw)", fontWeight: 'bold' }}> Capabilities </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Complete UAS Mastery</p>
+              <p style={{ color: "#263671", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Complete UAS Mastery</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
-                <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
+                <div style={{ width: "200px", borderBottom: '2px solid #263671', marginTop: "10px" }}>
                 </div>
       </div>
-<div className='circle-con' style={{ display: "flex", width: "100%", height: "500px", justifyContent: "center",  marginTop: "30px" }}>
+
+ <div className='circle-con' style={{ display: "flex", width: "100%", height: "500px", justifyContent: "center",  marginTop: "30px" }}>
 
       <div className='circle' style={{  position: "absolute", display: "flex", justifyContent: "center", marginRight: "8%", alignItems: "center", flexDirection: "column", borderRadius: "50%", border: "3px solid #15ae66" }}>
-        <p style={{ fontWeight: "600", color: "#03254c", fontSize: "calc(32px + 0.390625vw)", marginBottom: "0px" }}> UAS</p>
-        <p style={{ fontWeight: "600", color: "#15ae66",  fontSize: "calc(32px + 0.390625vw)", marginTop: "0px" }}>360</p>
+        <p className='uas' style={{ fontWeight: "600", color: "#263671", fontSize: "calc(32px + 0.390625vw)", marginBottom: "0px" }}> UAS</p>
+        <p className='uas' style={{ fontWeight: "600", color: "#15ae66",  fontSize: "calc(32px + 0.390625vw)", marginTop: "0px" }}>360</p>
 
-        <div style={{ width: "70px",  display: "flex", justifyContent: "center", alignItems: "center", height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "3%", left: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
-          <BiDoughnutChart fontSize={42} color="#03254c" />
+        <div className='eng-c' style={{ width: "70px",  display: "flex", justifyContent: "center", alignItems: "center", height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "3%", left: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
+           <img src={EngIcon} width={"75%"} height={"75%"} />
         </div>
-        <div style={{  position: "absolute", top: "20%", left: "12%",  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Enginerring</p>
+        <div className="eng" style={{  position: "absolute", top: "20%", left: "12%",  }}>
+          <p style={{ color: "#263671", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Enginerring</p>
         </div>
-        <div style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "3%", right: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
-          <GrSettingsOption fontSize={42}  color= "#03254c"/>
-        </div>
-
-        <div style={{  position: "absolute", top: "20%", right: "12%",  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Maintaince</p>
+        <div  className='eng-c' style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "3%", right: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
+        <img src={MainIcon} width={"75%"} height={"75%"} />
+          
         </div>
 
-        <div style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "40%", right: "-9%", borderRadius: "50%", border: "3px solid #15ae66" }}>
-          <GrPersonalComputer fontSize={42} />
+        <div  className="main" style={{  position: "absolute", top: "20%", right: "12%",  }}>
+          <p style={{ color: "#263671", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Maintaince</p>
         </div>
 
-        <div style={{  position: "absolute", top: "53%", right: "-30%", width: "100px"  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Design & Development</p>
-        </div>
-        <div style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center", height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "40%", left: "-9%", borderRadius: "50%", border: "3px solid #15ae66" }}>
-          <TbSettingsBolt fontSize={42} />
+        <div  className='eng-c' style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "40%", right: "-9%", borderRadius: "50%", border: "3px solid #15ae66" }}>
+        <img src={DesgIcon} width={"60%"} height={"60%"} />
         </div>
 
-        <div style={{  position: "absolute", top: "53%", left: "-26%", width: "100px"  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Opearations</p>
+        <div className='desg' style={{  position: "absolute", top: "53%", right: "-30%", width: "100px"  }}>
+          <p style={{ color: "#263671", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Design & Development</p>
+        </div>
+        <div  className='eng-c' style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center", height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", top: "40%", left: "-9%", borderRadius: "50%", border: "3px solid #15ae66" }}>
+        <img src={CogIcon} width={"75%"} height={"75%"} />
+        
         </div>
 
-        <div style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", bottom: "3%", left: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
-          <GiTeacher fontSize={42} />
+        <div className='op' style={{  position: "absolute", top: "53%", left: "-26%", width: "100px"  }}>
+          <p style={{ color: "#263671", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Opearations</p>
         </div>
-        <div style={{  position: "absolute", bottom: "-9%", left: "12%", width: "100px"  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Traning</p>
+
+        <div  className='eng-c' style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", bottom: "3%", left: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
+        <img src={TraIcon} width={"70%"} height={"70%"} />
         </div>
-        <div style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", bottom: "3%", right: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
-        <TbSettingsBolt fontSize={42} />
+        <div className='tran' style={{  position: "absolute", bottom: "-9%", left: "12%", width: "100px"  }}>
+          <p style={{ color: "#263671", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Traning</p>
         </div>
-        <div style={{  position: "absolute", bottom: "-9%", right: "7%", width: "100px"  }}>
-          <p style={{ color: "#03254c", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Manufactoring</p>
+        <div  className='eng-c' style={{ width: "70px", display: "flex", justifyContent: "center", alignItems: "center",  height: "70px", zIndex: "999999",background: "lightgray", position: "absolute", bottom: "3%", right: "10%", borderRadius: "50%", border: "3px solid #15ae66" }}>
+        <img src={MannuIcon} width={"70%"} height={"70%"} />
+        </div>
+        <div className='manu' style={{  position: "absolute", bottom: "-9%", right: "7%", width: "100px"  }}>
+          <p style={{ color: "#263671", fontWeight: "600", fontSize: "calc(22px + 0.390625vw)", }}>Manufactoring</p>
         </div>
       </div>
-</div>
+</div> 
 
 
-<div id="sec9" style={{   paddingTop: "40px", paddingBottom: "0px" , marginBottom: "0px",marginRight: "5%"}}>
+ <div className='ml-m mt-m' id="sec9" style={{   paddingTop: "40px", paddingBottom: "0px" , marginBottom: "0px",marginRight: "5%"}}>
             <div style={{ width: "50%", marginTop: "40px" }}>
               <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(16px + 0.390625vw)", fontWeight: 'bold' }}> NEWS </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Check Our Latest News</p>
+              <p style={{ color: "#263671", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Check Our Latest News</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
-                <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
+                <div style={{ width: "200px", borderBottom: '2px solid #263671', marginTop: "10px" }}>
                 </div>
             </div>
             <div style={{ marginLeft: "auto" }}>
@@ -304,19 +321,20 @@ function App() {
             </p>
             </div>
             
-      </div>
-      <div className='news-card-con'>
+      </div> 
+
+      <div className='news-card-con ml-m'>
       <div className='news-card'>
                 <img src={j1}   className='news-card-image' />
-                <p style={{ color: "#03254c", fontWeight: "600", marginBottom: "2px" }}>Upcomming Events</p>
+                <p style={{ color: "#263671", fontWeight: "600", marginBottom: "2px" }}>Upcomming Events</p>
                 <div style={{ display: "flex", alignItems: "center" }}>
                 <BsArrowRight   color="#15ae66" />
                 <p style={{ color: "#15ae66", fontWeight: "400", marginLeft: "5px" }}>  Read More</p>
                 </div>
             </div>
-            <div className='news-card'>
+             <div className='news-card'>
                 <img src={j2}  className='news-card-image' />
-                <p style={{ color: "#03254c", fontWeight: "600",marginBottom: "2px" }}>New CEO</p>
+                <p style={{ color: "#263671", fontWeight: "600",marginBottom: "2px" }}>New CEO</p>
                 <div style={{ display: "flex", alignItems: "center" }}>
                 <BsArrowRight   color="#15ae66" />
                 <p style={{ color: "#15ae66", fontWeight: "400", marginLeft: "5px" }}>  Read More</p>
@@ -325,27 +343,27 @@ function App() {
             </div>
             <div className='news-card'>
                 <img src={j3}  className='news-card-image'/>
-                <p style={{ color: "#03254c", fontWeight: "600", marginBottom: "2px" }}>Twitter Posts</p>
+                <p style={{ color: "#263671", fontWeight: "600", marginBottom: "2px" }}>Twitter Posts</p>
                 <div style={{ display: "flex", alignItems: "center" }}>
                 <BsArrowRight   color="#15ae66" />
                 <p style={{ color: "#15ae66", fontWeight: "400", marginLeft: "5px" }}>  Read More</p>
                 </div>
-            </div>
+            </div> 
             </div>
 
-            <div id="sec10">
+           <div className='ml-m' id="sec10">
             <div className='sec10-one'>
               <p style={{ color: "#15ae66", marginBottom: "2px", fontSize:"calc(16px + 0.390625vw)", fontWeight: 'bold' }}> CAREERS </p>
-              <p style={{ color: "#03254c", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Join Us</p>
+              <p style={{ color: "#263671", marginTop: "5px", fontSize:"calc(24px + 0.390625vw)", fontWeight: 'bold' }}>Join Us</p>
                 <div style={{ width: "100px", borderBottom: '2px solid #15ae66', }}></div>
-                <div style={{ width: "200px", borderBottom: '2px solid #03254c', marginTop: "10px" }}>
+                <div style={{ width: "200px", borderBottom: '2px solid #263671', marginTop: "10px" }}>
                 </div>
 
                 <p style={{ maxWidth:"430px", marginTop: "10px", marginBottom: '30px' }}>
                 Publishing and graphic design, Lorem ipsum is a placeholder text commonly used. 
                 </p>
 
-                <button style={{ width: "170px", height: "40px", background: "#03254c", color: "white" , border: "none", outline: "none"}} onClick={() =>  setOpen1(true)}>APPLY NOW</button>
+                <button style={{ width: "170px", height: "40px", background: "#263671", color: "white" , border: "none", outline: "none"}} onClick={() =>  setOpen1(true)}>APPLY NOW</button>
 
             </div>
 
@@ -367,10 +385,10 @@ function App() {
             </div>
 
             
-            </div>
+            </div> 
 
-      <div id="sec11" style={{ justifyContent: "space-between", marginRight: "8%", marginTop: "50px", marginBottom: "40px" }}>
-                  <div style={{ width: "280px", height: "135px", background: "white", paddingLeft: "30px", paddingRight: "15px", paddingTop: '20px', paddingBottom: '20px' }}>
+       <div className='ml-m' id="sec11" style={{ justifyContent: "space-between", marginRight: "8%", marginTop: "50px", marginBottom: "40px" }}>
+                  <div className='mb-m' style={{ width: "280px", height: "135px", background: "white", paddingLeft: "30px", paddingRight: "15px", paddingTop: '20px', paddingBottom: '20px' }}>
                     <MdLocationOn  fontSize={32} color="#15ae66"/>
                   <p style={{ color: "#15ae66", fontWeight: "600" }}>Location</p>
                   <span style={{ color: "gray", fontWeight: "500" }}> 7409 King Abdulaziz - King Abdulaziz Dist. Unit No 1</span>
@@ -378,29 +396,31 @@ function App() {
 
                 </div>
 
-                <div style={{ width: "280px", height: "135px", background: "white", paddingLeft: "30px", paddingRight: "15px", paddingTop: '20px', paddingBottom: '20px' }}>
+                <div  className='mb-m' style={{ width: "280px", height: "135px", background: "white", paddingLeft: "30px", paddingRight: "15px", paddingTop: '20px', paddingBottom: '20px' }}>
                   <BiSolidPhone  fontSize={32} color="#15ae66" />
                   <p style={{ color: "#15ae66", fontWeight: "600" }}>PHone No</p>
                   <span style={{ color: "gray", fontWeight: "500" }}> 011-4546083 </span>
 
                 </div>
 
-                <div style={{ width: "280px", height: "135px", background: "white", paddingLeft: "30px", paddingRight: "15px", paddingTop: '20px', paddingBottom: '20px' }}>
+                <div  className='mb-m' style={{ width: "280px", height: "135px", background: "white", paddingLeft: "30px", paddingRight: "15px", paddingTop: '20px', paddingBottom: '20px' }}>
                   <BsSendFill fontSize={32} color="#15ae66" />
                   <p style={{ color: "#15ae66", fontWeight: "600" }}>E-mail</p>
                   <span style={{ color: "gray", fontWeight: "500" }}> info@intro.sa </span>
                 </div>
 
-                </div>
+                </div> 
    </div>
 
    <div className='footer' style={{  justifyContent: "space-around", alignItems: "center", background: "white", width: "100%" }}>
+    <div className="footer-inside">
     <img src={CLogo} width={200}/>
-    <p style={{ color: "#03254c" }}>@2023 INTRA - All right reserved</p>
+    <p style={{ color: "#263671" }}>@2023 INTRA - All right reserved</p>
     <div>
       <GrLinkedinOption />
       <BiLogoTwitter style={{ marginLeft: "15px" }} />
     </div>
+   </div>
    </div>
 
 <FormDialog open={open1} handleClose={() => {
@@ -417,7 +437,7 @@ export default App;
 
 const NewCard = ({className,name,desc,logo, width="350px", height="250px"}) => {
   return(
-    <div className={className} style={{ width: width, height: height, background: "#03254c", paddingLeft: "30px", paddingRight: "15px", paddingTop: '20px', paddingBottom: '20px' }}>
+    <div className={className} style={{ width: width, height: height, background: "#263671", paddingLeft: "30px", paddingRight: "15px", paddingTop: '20px', paddingBottom: '20px' }}>
     {logo}
     <p style={{ color: "#15ae66", fontWeight: "600" }}>{name}</p>
     <p style={{ color: "white", fontWeight: "500" }}> {desc} </p>
@@ -458,7 +478,7 @@ const IntraCard = ({text,number,extraText}) => {
      </CountUp>
       }</p> <p>{extraText}</p>
       <div className='intra-card-logo'>
-        <img src={A}  />
+        <img style={{ opacity: 1 }} src={EngIcon}  />
       </div>
     </div>
   )

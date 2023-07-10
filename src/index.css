@@ -7,7 +7,13 @@
     font-family: HN;
     src: url(./assets//fonts//HelveticaNeue.ttc);
     }
+.ml-f{
+margin-left: 8%;
+}
 
+    .lo{
+      width: 140px
+    }
     
 
     #sec10{
@@ -146,8 +152,106 @@
       height: 200px;  width: calc(80vw / 3) ;
     }
 
-   
+   .mobile-menu{
+    display: none;
+   }
+   .desktop-menu{
+    display: block;
+   }
     @media screen and (min-device-width: 360px) and (max-device-width: 512px)  { 
+
+      .mb-m{
+        margin-bottom:  10px !important;
+        width: 90% !important;
+      }
+
+      .circle-con{
+        height: 350px !important;
+      }
+
+      .ml-m{
+        margin-left: 4%;
+      }
+      .mt-m{
+        padding-top: 10px !important;
+      }
+      #sec6{
+        margin-left: 4%;
+      }
+      .ml-f{
+        margin-left: 0% !important 
+        }
+        .uas {
+          font-size: 18px !important;
+        }
+      .eng-c{
+        height: 50px !important;
+        width: 50px !important;
+      }
+      .manu {
+        bottom: -11% !important;
+        right: 4% !important;
+      }
+      .manu p {
+        font-size: 14px !important;
+      }
+      .tran p{
+        font-size: 14px !important;
+    }
+    .op{
+      left: 4% !important;
+      top: 55% !important;
+  }
+  .op p{
+    font-size: 14px !important;
+}
+    .desg{
+      right: -1% !important;
+  }
+  .desg p{
+    font-size: 14px !important;
+}
+      .eng{
+        top: 20% !important
+      }
+      .eng p {
+        font-size: 14px !important;
+      }
+
+      .main p {
+        font-size: 14px !important;
+      }
+
+      .main {
+        top: 20% !important
+      }
+
+      .main-c p{
+        font-size: 14px !important;
+      }
+
+      .image-container2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100% !important;
+        background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 80%) !important;
+      
+      }
+
+      .mobile-menu{
+        display: block;
+      }
+
+      .desktop-menu{
+        display: none !important;
+      }
+
+      .con{
+        display: block !important;
+      }
 
       .oil-and-gas{
         height: 350px !important;
@@ -166,7 +270,7 @@
       }
 
       .news-card{
-        width: 800px !important; height: 300px;
+        width: 100% !important; height: 300px;
       }
 
       .news-card-image{
@@ -183,10 +287,17 @@
 
       .footer{
         display: block;
-        height: 120px;
-        padding-left: 90px;
+        height: 140px;
         padding-top: 10px;
         padding-bottom: 10px;
+      }
+      .footer-inside{
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
       .sec10-one{
@@ -288,7 +399,7 @@
       #sec4{
         margin-left: 2%;
         margin-top: -90px; 
-        display: none;
+        /* display: none; */
       }
 
       .strokeme{
@@ -318,9 +429,13 @@
       .image-container{
         width: 100% !important;
         height: 100vh;
+        display: none;
       }
       .image-container2{
-        /* display: none; */
+        width: 100% !important;
+      }
+      .two{
+        width: 100%;
       }
       .main-text{
         top: 35%;
@@ -654,7 +769,10 @@ background-image: linear-gradient(to top, rgba(38,55,112, 0.9) 0%, rgba(255, 255
 .intra-card-logo{
   position: absolute;
   width: 50px;
-  background-color: rgb(174, 223, 174);
+  /* background-color: rgb(174, 223, 174);
+   */
+  background-color: #263770;
+opacity: 13%;
   height: 50px;
   border-radius: 50%;
   top: -9px;
